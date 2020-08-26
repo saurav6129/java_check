@@ -3,17 +3,21 @@ pipeline {
 	stages {
 		stage('Java build') {
 			agent {
-				docker{
+				docker {
 					image 'node:6.3'
+				
 				}
+			}
+		
+			steps{
+				sh'npm install'
+				sh 'npm --version'
+			
 			}
 		}
 		
-		steps{
-			sh'npm install'
-			sh 'npm --version'
-			
-		}
 		
 	}
 }
+
+
