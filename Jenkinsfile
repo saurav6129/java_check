@@ -4,7 +4,7 @@ pipeline {
 		stage('Java build') {
 			agent {
 				docker {
-					image 'node:6.3'
+					image 'node:3.10.3'
 				
 				}
 			}
